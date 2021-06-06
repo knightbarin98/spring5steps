@@ -1,0 +1,18 @@
+package com.mrbarin.springcourse.basics.componentscan;
+
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
+
+@Component
+//In this way you can have different instance of this component that is being called as dependency in person DAO
+//Thus, each time we ask for a bean for PersonDAO we have a different instance of JdbcConnection;
+@Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE,
+		proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class ComponentJdbcConnection {
+	
+	public ComponentJdbcConnection() {
+		System.out.println("JDBC Connection");
+	}
+}

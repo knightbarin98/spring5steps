@@ -5,10 +5,13 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
 public class ComponentDAO {
 	
-	@Autowired
+	@Inject
 	ComponentJdbcConnection jdbcConnection;
 
 	public ComponentJdbcConnection getJdbcConnection() {

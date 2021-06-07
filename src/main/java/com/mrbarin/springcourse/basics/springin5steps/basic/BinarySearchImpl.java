@@ -1,18 +1,17 @@
 package com.mrbarin.springcourse.basics.springin5steps.basic;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 //Tell spring this class is a bean
-@Component
+@Named
 //Use annotation scope to specify how we want the scope would be
 //prototype for many instances, singleton just for one
 //@Scope("prototype")
@@ -28,7 +27,7 @@ public class BinarySearchImpl {
 	
 	
 	//Qualifier multiple candidates
-	@Autowired
+	@Inject
 	@Qualifier("quick")
 	private SortAlgorithm sortAlgorithm;
 	
@@ -70,7 +69,7 @@ public class BinarySearchImpl {
 	//Search the array
 	//Return result
 	
-	
+	/*
 	//life cycle
 	//After create the bean
 	@PostConstruct
@@ -83,4 +82,5 @@ public class BinarySearchImpl {
 	public void preDestroy() {
 		logger.info("preDestroy");
 	}
+	 */
 }

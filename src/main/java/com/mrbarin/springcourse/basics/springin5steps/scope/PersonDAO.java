@@ -1,14 +1,12 @@
 package com.mrbarin.springcourse.basics.springin5steps.scope;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@Component
+@Named
 public class PersonDAO {
 	
-	@Autowired
+	@Inject
 	JdbcConnection jdbcConnection;
 
 	public JdbcConnection getJdbcConnection() {

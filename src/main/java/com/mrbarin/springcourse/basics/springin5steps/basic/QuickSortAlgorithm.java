@@ -1,9 +1,10 @@
 package com.mrbarin.springcourse.basics.springin5steps.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component
+import javax.inject.Named;
+
+@Named
 @Qualifier("quick")
 public class QuickSortAlgorithm implements SortAlgorithm{
 	

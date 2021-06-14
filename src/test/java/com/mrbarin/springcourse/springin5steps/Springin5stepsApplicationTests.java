@@ -1,9 +1,13 @@
 package com.mrbarin.springcourse.springin5steps;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@SpringBootTest
+//@SpringBootTest
+//Junit 4
+//@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 class Springin5stepsApplicationTests {
 
 	@Test

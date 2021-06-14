@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.mrbarin.springcourse.basics.springin5steps.basic.BinarySearchImpl;
 
 @Configuration
-@ComponentScan("com.mrbarin.springcourse.basics.springin5steps")
+@ComponentScan("com.mrbarin.springcourse.basics.springin5steps.basic")
 public class Springin5stepsApplication {
 		
 		//Spring IOC container create the instances of the bean including its destruction
